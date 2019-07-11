@@ -91,8 +91,8 @@ function newCard(obj) {
   const name = document.createElement('h3'); 
   const username = document.createElement('p'); 
   const location = document.createElement('p'); 
-  const profile = document.createElement('p'); 
-  const profileAddress = document.createElement('a'); 
+  const profilePage = document.createElement('p')
+  const profileLink = document.createElement('a'); ; 
   const followers = document.createElement('p'); 
   const following = document.createElement('p'); 
   const bio = document.createElement('p'); 
@@ -103,31 +103,36 @@ function newCard(obj) {
   name.classList.add('name'); 
   username.classList.add('username'); 
 
-  //creating HTML structure 
-  card.appendChild(pfp); 
-  card.appendChild(cardInfo); 
-  cardInfo.appendChild(name);
-  cardInfo.appendChild(username); 
-  cardInfo.appendChild(location); 
-  cardInfo.appendChild(profile); 
-  cardInfo.appendChild(profileAddress); 
-  cardInfo.appendChild(followers); 
-  cardInfo.appendChild(following); 
-  cardInfo.appendChild(bio); 
-
   //setting text content 
   pfp.src = obj.avatar_url; 
   name.textContent = obj.name; 
   username.textContent = obj.login; 
   location.textContent = `Location: ${obj.location}`; 
-  profile.textContent = `Profile: `; 
-  profileAddress.textContent = `${obj.html_url}`; 
-  profileAddress.href = `"${obj.html_url}"`; 
+  profilePage.textContent = `Profile: `; 
+  profileLink.textContent = obj.html_url; 
+  profileLink.href = obj.html_url; 
   followers.textContent = `Followers: ${obj.following}`; 
   following.textContent = `Following: ${obj.followers}`; 
   bio.textContent = `Bio: ${obj.bio}`; 
 
-return card; 
+  //HTML structure
+    //creating HTML structure 
+    card.appendChild(pfp); 
+    card.appendChild(cardInfo); 
+    cardInfo.appendChild(name);
+    cardInfo.appendChild(username); 
+    cardInfo.appendChild(location); 
+    cardInfo.appendChild(profilePage); 
+    profilePage.appendChild(profileLink); 
+    cardInfo.appendChild(followers); 
+    cardInfo.appendChild(following); 
+    cardInfo.appendChild(bio); 
+
+  
+
+
+
+  return card; 
 
 }
 
