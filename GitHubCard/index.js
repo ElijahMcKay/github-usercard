@@ -80,4 +80,17 @@ function newCard(obj) {
     name.classList.add('name'); 
     username.classList.add('username'); 
 
+    //creating HTML structure
+    cards.appendChild(card); 
+    cards.appendChild(pfp); 
+    cards.appendChild(cardInfo); 
+    cardInfo.appendChild(name);
+    cardInfo.appendChild(username); 
+    cardInfo.appendChild(location); 
+    cardInfo.appendChild(profile); 
+    profile.appendChild(profileAddress); 
+    cardInfo.appendChild(followers); 
+    cardInfo.appendChild(following); 
+    cardInfo.appendChild(bio); 
+  
 }
