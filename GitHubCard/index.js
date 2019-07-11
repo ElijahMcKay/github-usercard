@@ -59,37 +59,20 @@ const followersArray = [];
 */
 
 function newCard(obj) {
-  
+    
   //Selecting and creating new elements  
-  const cards = document.querySelector('.cards'); 
-  const card = document.createElement('div'); 
-  const pfp = document.createElement('img'); 
-  const cardInfo = document.createElement('div'); 
-  const name = document.createElement('h3'); 
-  const username = document.createElement('p'); 
-  const location = document.createElement('p'); 
-  const profile = document.createElement('p'); 
-  const profileAddress = document.createElement('a'); 
-  const followers = document.createElement('p'); 
-  const following = document.createElement('p'); 
-  const bio = document.createElement('p'); 
+    const cards = document.querySelector('.cards'); 
+    const card = document.createElement('div'); 
+    const pfp = document.createElement('img'); 
+    const cardInfo = document.createElement('div'); 
+    const name = document.createElement('h3'); 
+    const username = document.createElement('p'); 
+    const location = document.createElement('p'); 
+    const profile = document.createElement('p'); 
+    const profileAddress = document.createElement('a'); 
+    const followers = document.createElement('p'); 
+    const following = document.createElement('p'); 
+    const bio = document.createElement('p'); 
+  
 
-  //setting class names 
-  card.classList.add('card'); 
-  cardInfo.classList.add('card-info'); 
-  name.classList.add('name'); 
-  username.classList.add('username'); 
-
-  //creating HTML structure
-  cards.appendChild(card); 
-  cards.appendChild(pfp); 
-  cards.appendChild(cardInfo); 
-  cardInfo.appendChild(name);
-  cardInfo.appendChild(username); 
-  cardInfo.appendChild(location); 
-  cardInfo.appendChild(profile); 
-  profile.appendChild(profileAddress); 
-  cardInfo.appendChild(followers); 
-  cardInfo.appendChild(following); 
-  cardInfo.appendChild(bio); 
 }
