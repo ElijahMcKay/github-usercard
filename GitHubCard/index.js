@@ -9,7 +9,8 @@
 
    Skip to Step 3.
 */
-
+axios.get('https://api.github.com/users/elijahmckay'); 
+  .then(data => console.log(this)); 
 /* Step 4: Pass the data received from Github into your function, 
            create a new component and add it to the DOM as a child of .cards
 */
@@ -29,7 +30,19 @@ const followersArray = [];
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
 
-<div class="card">
+
+
+*/
+
+/* List of LS Instructors Github username's: 
+  tetondan
+  dustinmyers
+  justsml
+  luishrd
+  bigknell
+
+
+  <div class="card">
   <img src={image url of user} />
   <div class="card-info">
     <h3 class="name">{users name}</h3>
@@ -43,13 +56,40 @@ const followersArray = [];
     <p>Bio: {users bio}</p>
   </div>
 </div>
-
 */
 
-/* List of LS Instructors Github username's: 
-  tetondan
-  dustinmyers
-  justsml
-  luishrd
-  bigknell
-*/
+function newCard(obj) {
+  
+  //Selecting and creating new elements  
+  const cards = document.querySelector('.cards'); 
+  const card = document.createElement('div'); 
+  const pfp = document.createElement('img'); 
+  const cardInfo = document.createElement('div'); 
+  const name = document.createElement('h3'); 
+  const username = document.createElement('p'); 
+  const location = document.createElement('p'); 
+  const profile = document.createElement('p'); 
+  const profileAddress = document.createElement('a'); 
+  const followers = document.createElement('p'); 
+  const following = document.createElement('p'); 
+  const bio = document.createElement('p'); 
+
+  //setting class names 
+  card.classList.add('card'); 
+  cardInfo.classList.add('card-info'); 
+  name.classList.add('name'); 
+  username.classList.add('username'); 
+
+  //creating HTML structure
+  cards.appendChild(card); 
+  cards.appendChild(pfp); 
+  cards.appendChild(cardInfo); 
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(username); 
+  cardInfo.appendChild(location); 
+  cardInfo.appendChild(profile); 
+  profile.appendChild(profileAddress); 
+  cardInfo.appendChild(followers); 
+  cardInfo.appendChild(following); 
+  cardInfo.appendChild(bio); 
+}
