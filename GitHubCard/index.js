@@ -92,5 +92,16 @@ function newCard(obj) {
     cardInfo.appendChild(followers); 
     cardInfo.appendChild(following); 
     cardInfo.appendChild(bio); 
-  
+
+    //setting text content 
+    pfp.src = obj.avatar_url; 
+    name.textContent = obj.name; 
+    username.textContent = obj.login; 
+    location.textContent = `Location: ${obj.location}`; 
+    profile.textContent = `Profile: `; 
+    profileAddress.href = obj.html_url; 
+    followers.textContent = `Followers: ${obj.followers_url}`; 
+    following.textContent = `Following: ${obj.following_url}`; 
+    bio.textContent = `Bio: ${obj.bio}`; 
+
 }
